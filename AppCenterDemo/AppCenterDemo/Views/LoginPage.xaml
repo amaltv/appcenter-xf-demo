@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCenterDemo.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Entry AutomationId="txtUserName" Placeholder="UserName" FontSize="Small" Text="{Binding UserName}"></Entry>
+            <Entry AutomationId="txtPassword" Placeholder="Password" IsPassword="True" FontSize="Small" Text="{Binding Password}"></Entry>
+            <Button AutomationId="btnLogin" Margin="0,10,0,0" Text="Login" Clicked="OnLogin"></Button>
+            <Label AutomationId="lblErrorMessage" Text="Invalid Credentials" TextColor="Red" IsVisible="{Binding IsAuthorized}"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
